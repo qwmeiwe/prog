@@ -1,0 +1,18 @@
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+    int a=60;
+    while(a>=12){
+        if(a%2==0){
+            cout<<a<<endl;
+            a--;
+        }
+        else{
+           a--;
+        }
+    }
+    return 0;
+}
