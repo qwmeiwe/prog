@@ -1,0 +1,26 @@
+
+#include <iostream>
+#include <cmath>
+using namespace std;
+
+int main()
+{
+    int a, b; // [a, b] - диапозон; 
+    cin >> a >> b;
+    for (int i = a; i <= b; i++){
+        float y;
+        if (i < 0) {
+            y = 0;
+        } else if (i >= 0 && i != 1) {
+            y = i * i + 1;
+        } else {
+            y = 1;
+        }   
+        
+        cout << "x: " << i << " y: " << y << endl;
+        
+        
+    }
+
+    return 0;
+}

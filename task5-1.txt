@@ -1,0 +1,29 @@
+#include <iostream>
+#include <cmath>
+using namespace std;
+
+int main()
+{
+    int a, b; // [a, b] - диапозон; 
+    cin >> a >> b;
+    for (int i = a; i <= b; i++){
+        float y;
+        if (abs(i) < 3) {
+            y = sin(i);
+        } else if (abs(i) >= 3 && std::abs(i) < 9) {
+            double verh = pow(i * i + 1, 2);
+            double niz = pow(i * i + 5, 2);
+            y = verh / niz;
+        } else {
+            double term1 = pow(i * i + 1, 2);
+            double term2 = pow(i * i + 5, 2);
+            y = term1 - term2;
+        }
+        
+        cout << "x: " << i << " y: " << y << endl;
+        
+        
+    }
+
+    return 0;
+}
