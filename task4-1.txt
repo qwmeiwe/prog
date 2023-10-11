@@ -1,0 +1,20 @@
+#include <iostream>
+#include <cmath>
+using namespace std;
+
+int main()
+{
+    int a, b; // [a, b] - диапозон; 
+    cin >> a >> b;
+    for (int i = a; i <= b; i++){
+        float result = 1/(pow(i, 2) - 1);
+        if(abs(i)!=1){
+            cout << "x: " << i << "y: " << result << endl;
+        }else {
+            cout << "Не определено" << endl;
+        }
+        
+    }
+
+    return 0;
+}
