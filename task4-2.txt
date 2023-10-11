@@ -1,0 +1,24 @@
+#include <iostream>
+#include <cmath>
+using namespace std;
+
+int main()
+{
+    int a, b; // [a, b] - диапозон; 
+    cin >> a >> b;
+    for (int i = a; i <= b; i++){
+        
+        float term1 = log(i * i * i * i - 1); // ln(x^4 - 1)
+        float term2 = log(1 + i); // ln(x + i)
+
+        float result = term1 * term2;
+        if(i >= 0 || i != 1){
+            cout << "x: " << i << "y: " << result << endl;
+        }else {
+            cout << "Не определено" << endl;
+        }
+        
+    }
+
+    return 0;
+}
